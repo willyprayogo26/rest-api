@@ -18,7 +18,7 @@ module.exports = {
                         next()
                     } else {
                         res.status(401).json({
-                            msg: 'User not found'
+                            msg: 'Unauthorized'
                         })
                     }
                 })

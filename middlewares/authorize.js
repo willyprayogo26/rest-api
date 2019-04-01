@@ -4,7 +4,9 @@ module.exports = {
             if (req.user.role === 'admin') {
                 next()
             } else {
-                throw new Error(`Bad request`)
+                res.status(401).json({
+                    message: 'Unauthorized'
+                })
             }
         } catch (err) {
             res.status(400).json({
