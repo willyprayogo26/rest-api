@@ -20,3 +20,28 @@
 | /api/users/:id | PUT    | Authenticated:<br />(token)                                  | email: String                                         | Update a user with new info (admin and authenticated user)<br />success:<br />(200), example: {msg: 'Updated'}<br />errors:<br />(404), example: {msg: 'User not found'}<br />(500), error |
 | /api/users/:id | DELETE | Authenticated:<br />(token),<br />Authorized:<br />(role: admin) | none                                                  | Delete a user (admin only)<br />success:<br />(200), example: {msg: 'Deleted'}<br />errors:<br />(404), example: {msg: 'User not found'}<br />(500), error |
 
+
+
+Link Deploy:
+
+https://tranquil-lake-14994.herokuapp.com/
+
+
+
+Example: 
+
+RegisterAdmin: https://tranquil-lake-14994.herokuapp.com/api/registerAdmin
+
+RegisterMember: https://tranquil-lake-14994.herokuapp.com/api/register
+
+Login: https://tranquil-lake-14994.herokuapp.com/api/login
+
+FindAllMember: https://tranquil-lake-14994.herokuapp.com/api/users
+
+FindOne: https://tranquil-lake-14994.herokuapp.com/api/users/2
+
+Create: https://tranquil-lake-14994.herokuapp.com/api/users
+
+Update: https://tranquil-lake-14994.herokuapp.com/api/users/2
+
+Delete: https://tranquil-lake-14994.herokuapp.com/api/users/2
