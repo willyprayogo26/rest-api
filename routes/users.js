@@ -1,11 +1,11 @@
 const router = require('express').Router()
 const { userController } = require('../controllers')
-const { isAuthorized } = require('../middlewares')
+const { isAuthorizedAdmin, isAuthorizedUser } = require('../middlewares')
 
-router.get('/:id', userController.getUserById)
-router.put('/:id', userController.updateUser)
+router.get('/:id', isAuthorizedUser, userController.getUserById)
+router.put('/:id', isAuthorizedUser, userController.updateUser)
 
-router.use(isAuthorized)
+router.use(isAuthorizedAdmin)
 router.get('/', userController.getAllUser)
 router.post('/', userController.createUser)
 router.delete('/:id', userController.deleteUser)

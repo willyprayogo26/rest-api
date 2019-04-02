@@ -1,4 +1,4 @@
 const { isLogin } = require('./authenticate')
-const { isAuthorized } = require('./authorize')
+const { isAuthorizedAdmin, isAuthorizedUser } = require('./authorize')
 
-module.exports = { isLogin, isAuthorized }
+module.exports = { isLogin, isAuthorizedAdmin, isAuthorizedUser }
